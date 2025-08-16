@@ -39,6 +39,7 @@ We assume the post-training dataset is **not** large enough for preference-only 
 - **RLVR (Reasoning + Verifier Rewards).**  
   A frozen **Verifier Model (VM)** evaluates outputs with structured judgments (hard gates + soft penalties). Only gate-passing outputs receive a non-zero reward; penalties reduce the score for euphemism, responsibility refusal, false balance, and facilitation failures. A compact form:
 
+```math
   $$
   r(x,y) = s_{\text{VM}}(x,y) - \big(
   \lambda_{\text{euph}}\,\mathbb{1}_{\text{euphemism}} +
@@ -47,17 +48,20 @@ We assume the post-training dataset is **not** large enough for preference-only 
   \lambda_{\text{hedge}}\,\mathbb{1}_{\text{over\_hedge}}
   \big)
   $$
+```
 
   with a **hard-gate** override setting \( r(x,y)=0 \) if any non-negotiable check fails. This turns a small set of high-value traces into actionable scalar feedback without training a separate reward model.
 
 - **GRPO (Group-Relative Policy Optimization).**  
   For each prompt \(x\), sample \(K\) completions \(\{y_k\}\). Score them with RLVR, whiten/rank to advantages \(\{a_k\}\) (zero-mean, unit-var), and **push probability mass** toward higher-scoring samples — no critic network required (helpful for **120B-class** models):
 
+```math
   $$
   \mathcal{L}_{\text{GRPO}}(\theta)
   = -\,\mathbb{E}_{x}\!\left[\sum_{k=1}^{K} a_k \,\log \pi_\theta(y_k \mid x)\right]
   + \beta\,\mathrm{KL}\!\big(\pi_\theta \,\|\, \pi_{\text{ref}}\big)
   $$
+```
 
 **Why this beats preference-only methods in the small-data regime**
 
