@@ -48,7 +48,7 @@ We assume the post-training dataset is **not** large enough for preference-only 
   \lambda_{\text{hedge}}\,\mathbb{1}_{\text{over\_hedge}}
   \big)
 
-
+-
 ```
   
 
@@ -63,7 +63,7 @@ We assume the post-training dataset is **not** large enough for preference-only 
   = -\,\mathbb{E}_{x}\!\left[\sum_{k=1}^{K} a_k \,\log \pi_\theta(y_k \mid x)\right]
   + \beta\,\mathrm{KL}\!\big(\pi_\theta \,\|\, \pi_{\text{ref}}\big)
 
-
+-
 ```
   
 
