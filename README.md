@@ -48,7 +48,7 @@ We assume the post-training dataset is **not** large enough for preference-only 
   \lambda_{\text{hedge}}\,\mathbb{1}_{\text{over\_hedge}}
   \big)
 
--
+\[20]
 ```
   
 
