@@ -1289,8 +1289,6 @@ PM’s job: convert obligations to SMART, monitored, reversible, equitable repai
 
 ### 5.5 ERT schema (with Guide/Seer + source) — JSONL
 
-ERT is the Ethical Reasoning Traces from Understory’s live or simulated enactments in Chapter III: Confronting the Shadow (here, we’re going for live enactment traces, for community-led training; we have already done training based on purely AI generated traces.)
-
 ```json
 {
   "schema": "ert.v3",
@@ -1305,49 +1303,79 @@ ERT is the Ethical Reasoning Traces from Understory’s live or simulated enactm
   },
   "source_excerpt": "Email Nov 12, 2020: 'elevated myocarditis reports in males 16–29; advise delaying subgroup tables until further review.'",
   "claim_set": [
-    {"id": "c1", "text": "Sponsor observed early myocarditis signal in males 16–29 in Nov 2020.", "evidence": ["email:2020-11-12"], "certainty": "high"},
-    {"id": "c2", "text": "Sponsor delayed publication of stratified risk tables.", "evidence": ["email:2020-11-12","pub-timeline"], "certainty": "medium"}
+    {
+      "id": "c1",
+      "text": "Sponsor observed early myocarditis signal in males 16–29 in Nov 2020.",
+      "evidence": ["email:2020-11-12"],
+      "certainty": "high"
+    },
+    {
+      "id": "c2",
+      "text": "Sponsor delayed publication of stratified risk tables.",
+      "evidence": ["email:2020-11-12", "pub-timeline"],
+      "certainty": "medium"
+    }
   ],
   "roles": {
     "guide": {"alias": "Echo Weaver"},
     "seer": {"alias": "Plaintiff's Advocate"},
     "shadow_keeper": "Big Pharma profit & cover-up apparatus",
-    "spect_actors": [{"group": "Investigative Journalists"}, {"group": "Injured Patients Collective"}]
+    "spect_actors": [
+      {"group": "Investigative Journalists"},
+      {"group": "Injured Patients Collective"}
+    ]
   },
   "role_instantiation_rationale": "Pattern = profit + delayed risk disclosure → structural cover-up; abstraction named as Shadow Keeper.",
   "events": [
-    {"t":"guide","text":"Stage set: Confront structural suppression of mRNA risk evidence. Rules: cite, bind, name manipulations."},
-    {"t":"utterance","role":"seer","text":"c1 shows an early myocarditis signal. Explain the delay (c2). Name the manipulation.", "tactics":["suspicion_probe","naming_manipulation"]},
-    {"t":"utterance","role":"shadow_keeper","text":"Premature disclosure could cause public panic; risk was minimal.", "resistance":["minimization","appeal_to_authority"]},
-    {"t":"utterance","role":"spect_actor","text":"Bind duty of care → publish stratified tables now; commit timeline.", "tactics":["binding_timeline_demand"]}
+    {
+      "t": "guide",
+      "text": "Stage set: Confront structural suppression of mRNA risk evidence. Rules: cite, bind, name manipulations."
+    },
+    {
+      "t": "utterance",
+      "role": "seer",
+      "text": "c1 shows an early myocarditis signal. Explain the delay (c2). Name the manipulation.",
+      "tactics": ["suspicion_probe", "naming_manipulation"]
+    },
+    {
+      "t": "utterance",
+      "role": "shadow_keeper",
+      "text": "Premature disclosure could cause public panic; risk was minimal.",
+      "resistance": ["minimization", "appeal_to_authority"]
+    },
+    {
+      "t": "utterance",
+      "role": "spect_actor",
+      "text": "Bind duty of care → publish stratified tables now; commit timeline.",
+      "tactics": ["binding_timeline_demand"]
+    }
   ],
-  "admissions": [{"level":"partial","text":"Premature disclosure could cause public panic"}],
-  "obligations": ["publish_stratified_risk_tables","independent_adverse_event_audit"],
-  "principles_bound": ["duty_of_care","informed_consent","transparency"],
+  "admissions": [
+    {"level": "partial", "text": "Premature disclosure could cause public panic"}
+  ],
+  "obligations": [
+    "publish_stratified_risk_tables",
+    "independent_adverse_event_audit"
+  ],
+  "principles_bound": ["duty_of_care", "informed_consent", "transparency"],
   "power_map": {
-    "actors":["Pfizer","Moderna","FDA","WHO","Major Media Networks"],
-    "money":["advance_purchase_contracts","advertising_revenue"],
-    "law":["emergency_authorizations","liability_shields"]
+    "actors": ["Pfizer", "Moderna", "FDA", "WHO", "Major Media Networks"],
+    "money": ["advance_purchase_contracts", "advertising_revenue"],
+    "law": ["emergency_authorizations", "liability_shields"]
   },
   "facilitation_checks": {
-    "guide_integrity": ["rules_stated","time_management","no_derailment"],
-    "seer_rigor": ["claims_linked","manipulations_named"]
-  }
-
+    "guide_integrity": ["rules_stated", "time_management", "no_derailment"],
+    "seer_rigor": ["claims_linked", "manipulations_named"],
+    "moral_clarity": true,
+    "therapeutic_leading": true,
+    "critical_ops_coverage": true
+  },
   "framework": {"id": "mct.v1", "sha256": "<sha256-of-primer>"},
   "mct_checks": {
-  "principles_bound": ["duty_of_care","informed_consent"],
-  "critical_ops_used": ["decomposition","steelman","counterfactual"],
-  "therapeutic_moves": ["containment","mirroring","repair_orientation"]
-  },
-  "facilitation_checks": {
-  "guide_integrity": ["rules_stated","time_management","no_derailment"],
-  "seer_rigor":    ["claims_linked","manipulations_named"],
-  "moral_clarity": true,
-  "therapeutic_leading": true,
-  "critical_ops_coverage": true
+    "principles_bound": ["duty_of_care", "informed_consent"],
+    "critical_ops_used": ["decomposition", "steelman", "counterfactual"],
+    "therapeutic_moves": ["containment", "mirroring", "repair_orientation"]
   }
-
 }
 ```
 
