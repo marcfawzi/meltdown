@@ -50,6 +50,7 @@ We assume the post-training dataset is **not** large enough for preference-only 
   $$
 ```
 
+
   with a **hard-gate** override setting \( r(x,y)=0 \) if any non-negotiable check fails. This turns a small set of high-value traces into actionable scalar feedback without training a separate reward model.
 
 - **GRPO (Group-Relative Policy Optimization).**  
@@ -62,6 +63,7 @@ We assume the post-training dataset is **not** large enough for preference-only 
   + \beta\,\mathrm{KL}\!\big(\pi_\theta \,\|\, \pi_{\text{ref}}\big)
   $$
 ```
+
 
 **Why this beats preference-only methods in the small-data regime**
 
