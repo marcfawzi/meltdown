@@ -604,7 +604,8 @@ def save_bases(bases: Dict[str, np.ndarray], variance: Dict[str, float], out_dir
 **Optional: use in §7 promotion** — load from the same folder instead of recomputing:
 
 ```python
-import json, os, np as np
+import json, os
+import numpy as np
 
 with open("ablit_artifacts/llama_ckpt1234/manifest.json") as f:
     meta = json.load(f)
