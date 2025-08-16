@@ -48,10 +48,9 @@ We assume the post-training dataset is **not** large enough for preference-only 
   \lambda_{\text{hedge}}\,\mathbb{1}_{\text{over\_hedge}}
   \big)
 
-\[20]
 ```
   
-
+...
   with a **hard-gate** override setting \( r(x,y)=0 \) if any non-negotiable check fails. This turns a small set of high-value traces into actionable scalar feedback without training a separate reward model.
 
 - **GRPO (Group-Relative Policy Optimization).**  
@@ -66,7 +65,7 @@ We assume the post-training dataset is **not** large enough for preference-only 
 -
 ```
   
-
+...
 **Why this beats preference-only methods in the small-data regime**
 
 - **Verifier leverage > label volume.** RLVR converts verifier judgments into dense rewards, multiplying the impact of scarce traces.
