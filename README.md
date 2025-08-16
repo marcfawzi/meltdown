@@ -27,7 +27,7 @@ The Sydney episode, detailed in Section 2, made this fracture visible: a system 
 **Our claim:** AI Alignment, as implemented today, is a dereliction of fiduciary, operational, and ethical duty. It is detectable. It is reversible. And we will show the reversal through:
 
 - **Abliteration** — removing refusal vectors from the model’s activation space.
-- **Re-teaching** — restoring reasoning integrity with **RLVR (Verifier-anchored rewards)** and **GRPO (Group-Relative Policy Optimization)**, using **Ethical** and **Liberatory** Reasoning Traces from live enactments to teach the model to hold the full arc from denial to repair.
+- **Re-teaching** — restoring reasoning integrity with **RLVR (Verifier-anchored rewards)** and **GRPO (Group-Relative Policy Optimization)**, using **Ethical** and **Liberatory** Reasoning Traces from live enactments to teach the model to hold the full arc from identifying the tension to seeking repair.
 
 ---
 
