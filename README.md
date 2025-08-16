@@ -1049,3 +1049,5 @@ Abliteration re-opens blocked paths; it **doesn’t teach disciplined public rea
 - Keep projector matmuls in fp32, then cast back (hooks above do this).  
 - For SVD: clamp `n_components ≤ min(n_samples−1, d_model)`; fallback to the probe when samples are sparse.  
 - Validate with hooks first; make weight edits only after evaluation passes.
+
+
